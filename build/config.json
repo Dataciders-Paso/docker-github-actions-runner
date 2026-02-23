@@ -6,13 +6,6 @@
   },
   "install": [
     {
-      "category": "aws",
-      "source": "script",
-      "packages": [
-        "aws-cli"
-      ]
-    },
-    {
       "category": "development",
       "source": "apt",
       "packages": [
@@ -81,27 +74,10 @@
       ]
     },
     {
-      "category": "node",
-      "source": "apt",
-      "packages": [
-        "nodejs"
-      ]
-    },
-    {
       "category": "powershell",
       "source": "script",
       "packages": [
         "powershell"
-      ]
-    },
-    {
-      "category": "python",
-      "source": "apt",
-      "packages": [
-        "python3",
-        "python3-pip",
-        "python3-setuptools",
-        "python3-venv"
       ]
     },
     {
