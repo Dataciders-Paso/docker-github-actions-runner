@@ -110,6 +110,26 @@
       "packages": [
         "yq"
       ]
+    },
+    {
+      "category": "browser",
+      "source": "apt",
+      "packages": [
+        "google-chrome-stable",
+        "fonts-ipafont-gothic",
+        "fonts-wqy-zenhei",
+        "fonts-thai-tlwg",
+        "fonts-kacst",
+        "fonts-freefont-ttf",
+        "libxss1"
+      ]
+    },
+    {
+      "category": "java",
+      "source": "apt",
+      "packages": [
+        "openjdk-11-jre-headless"
+      ]
     }
   ]
 }

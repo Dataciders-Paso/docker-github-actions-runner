@@ -34,6 +34,16 @@ function configure_docker() {
     | tee /etc/apt/sources.list.d/docker.list > /dev/null
 }
 
+function configure_google_chrome() {
+  mkdir -p /etc/apt/keyrings
+  curl -fsSL https://dl-ssl.google.com/linux/linux_signing_key.pub | gpg --dearmor -o /etc/apt/keyrings/google-chrome.gpg
+
+  local DPKG_ARCH
+  DPKG_ARCH="$(dpkg --print-architecture)"
+  echo "deb [arch=${DPKG_ARCH} signed-by=/etc/apt/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main" \
+    | tee /etc/apt/sources.list.d/google-chrome.list > /dev/null
+}
+
 function configure_container_tools() {
   # shellcheck source=/dev/null
   source /etc/os-release
@@ -51,10 +61,13 @@ function configure_sources() {
   configure_git
   configure_docker
   configure_container_tools
+  configure_google_chrome
 }
 
 function remove_sources() {
   rm -f /etc/apt/sources.list.d/git-core.list
   rm -f /etc/apt/sources.list.d/docker.list
   rm -f /etc/apt/sources.list.d/devel:kubic:libcontainers:stable.list
+  rm -f /etc/apt/sources.list.d/google-chrome.list
+  rm -f /etc/apt/keyrings/google-chrome.gpg
 }
