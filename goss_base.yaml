@@ -33,6 +33,10 @@ package:
         installed: true
     wget:
         installed: true
+    google-chrome-stable:
+        installed: true
+    openjdk-11-jre-headless:
+        installed: true
     yq:
         installed: false
     # Ubuntu Focal is the only one currently that doesnt have an official upstream skopeo/buildah/podman
