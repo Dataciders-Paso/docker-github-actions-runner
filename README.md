@@ -1,3 +1,5 @@
+Archived: Es wurde nun ein anderer Ansatz gewählt: Eigenes lokales Dockerfile basierend auf myoung34/github-runner:latest via Docker Hub
+
 Docker Github Actions Runner
 ============================
 
